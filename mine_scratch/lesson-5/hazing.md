@@ -5,16 +5,16 @@
 ### @explicitHints 1
 
 
-# Hazing 
+# Ловушка 
 
 ## Step 1
-The Agent needs to set **tripwire** so that wolves won't get in. Set the ``||agent:agent set block||`` to **tripwire** and set the count to **64**. Use the ``||loops:while||`` block and drop a condition inside it.  
+Агенту необходимо установить **Натяжной датчик** чтобы волки не смогли про так пройти. Установи в ``||agent:агент ставит блок||`` **Натяжной датчик**. Используй цикл ``||loops:пока||`` поставив правильное условие внутри.
 
 #### ~ tutorialhint
-Remember to use **not** in your condition. 
+Не забудь использовать **не** в своём условии!
 
 ```blocks
-player.onChat("hazing", function () {
+player.onChat("ловушка", function () {
     agent.setItem(TRIPWIRE, 64, 1)
     while (!(agent.detect(AgentDetection.Block, FORWARD))) {
     	
@@ -23,7 +23,7 @@ player.onChat("hazing", function () {
 
 ``` 
 ```ghost
-player.onChat("hazing", function () {
+player.onChat("ловушка", function () {
     agent.setItem(TRIPWIRE, 64, 1)
     while (!(agent.detect(AgentDetection.Block, FORWARD))) {
         agent.place(DOWN)

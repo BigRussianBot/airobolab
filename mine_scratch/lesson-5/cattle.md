@@ -5,13 +5,13 @@
 ### @explicitHints 1
 
 
-# Cattle
+# Скотоводство
 
 ## Step 1
-Look at the starter code and try running it. This code allows you to navigate the Agent without counting blocks. Look at the path the Agent needs to take and make sure you finish the coding sequence with correct turns for the Agent. Make sure that the Agent can reach the **gold plate**.  
+Посмотри на код который уже написан и попробуй запустить его. Он позволяет управлять движением агента без подсчёта блоков. Посмотри какой путь должен пройти агент чтобы достичь **золотого блока** и правильно запрограммируй его повороты.
 
 ```template
-player.onChat("sheep", function () {
+player.onChat("овцы", function () {
     while (!(agent.detect(AgentDetection.Block, FORWARD))) {
         agent.move(FORWARD, 1)
     }

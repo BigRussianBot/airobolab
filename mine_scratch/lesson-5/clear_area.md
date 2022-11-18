@@ -5,13 +5,13 @@
 ### @explicitHints 1
 
 
-# Clear the Foliage!
+# Уберём заросли!
 
 ## Step 1
-The Agent needs to destroy **8** blocks of foliage moving **forward**. There are **16** rows of foliage that the Agent needs to destroy. The Agent needs to ``||agent:destroy forward||`` and ``||agent:move forward||`` **8** times. 
+Агенту необходимо уничтожить **8** блоков зарослей продвигаясь **вперёд**. Тут всего **16** линий зарослей которые необходимо уничтожить. Для уничтожение одной линии агенту необходимо использовать ``||agent:агент уничтожить вперёд||`` и ``||agent:агент переместиться вперёд||`` **8** раз.
 #### ~ tutorialhint 
 ```blocks
-player.onChat("foliage", function () {
+player.onChat("очистка", function () {
     for (let index = 0; index < 8; index++) {
         for (let index = 0; index < 8; index++) {
         	
@@ -22,7 +22,7 @@ player.onChat("foliage", function () {
 ```
 
 ```ghost
-player.onChat("foliage", function () {
+player.onChat("очистка", function () {
     for (let index = 0; index < 8; index++) {
         agent.destroy(FORWARD)
         agent.move(FORWARD, 1)

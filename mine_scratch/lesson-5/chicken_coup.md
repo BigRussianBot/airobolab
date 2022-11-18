@@ -5,16 +5,16 @@
 ### @explicitHints 1
 
 
-# Chicken Coup
+# Куриный Переворот
 
-## Step 1
-The Agent needs to place **2** layers of **9** blocks of **iron bars**. There are **4** sides that need to have **iron bars**. Don't forget to use ``||agent:agent move up||``to build the second level.
+## Этап 1
+Агенту необходимо поставить сверху **2** слоя из **9** блоков **Железной Решётки**. Всего **4** стены, которые необходимо построить из **Железной Решётки**. Не забудьте использовать ``||agent:агент переместиться вверх||`` чтобы поставить второй слой.
 
 #### ~ tutorialhint
-At the end you will have **3** ``||loops:repeat|`` commands nested inside each other. Make sure that the Agent has more than 64 blocks in its inventory!
+В конце у вас должно получить **3** вложенных друк в друга блока ``||loops:повторить|``. Перед запуском проверь что у агента достаточно блоков.
 
 ```ghost
-player.onChat("chicken", function () {
+player.onChat("курицы", function () {
     for (let index = 0; index < 2; index++) {
         agent.setItem(IRON_BARS, 1, 1)
         for (let index = 0; index < 4; index++) {
